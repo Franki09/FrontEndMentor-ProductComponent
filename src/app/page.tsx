@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
-import Link from "next/link";
 
 import { MdOutlineShoppingCart } from "react-icons/md";
+import { toast } from "react-toastify";
 
 export default function Home() {
   return (
@@ -20,10 +22,24 @@ export default function Home() {
           </div>
           <div className="flex justify-center items-center gap-2 rounded-lg p-3 bg-green-500 hover:bg-green-700">
             <MdOutlineShoppingCart className="text-white text-xl" />
-            <Link href="" className="text-white font-montserrat">
+            <button
+              className="text-white font-montserrat"
+              onClick={() =>
+                toast.success("Item added to cart!", {
+                  position: "top-right",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "light",
+                })
+              }
+            >
               {" "}
               Add to Cart
-            </Link>
+            </button>
           </div>
         </div>
       </div>
