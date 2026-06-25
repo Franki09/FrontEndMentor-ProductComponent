@@ -30,6 +30,7 @@ const fraunces = Fraunces({
 export const metadata: Metadata = {
   title: "Perfume Product Page",
   description: "Frontend Mentor Challenge - Perfume Product Page",
+  icons: "/favicon-32x32.png",
 };
 
 export default function RootLayout({
